@@ -1,5 +1,27 @@
 function selectionSort(arr) {
   // type your code here
+  let sortedArray = []
+  // let lastIndex = sortedArray.length-1
+  // sortedArray.push(arr[0])
+  // for (let i = 1; i < arr.length; i++) {
+  //   if (sortedArray[lastIndex] < arr[i]) {
+  //     sortedArray.push(arr[i])
+  //   } else {
+  //     while(arr[i] < sortedArray[lastIndex]) {
+  //       lastIndex--
+  //     }
+
+  //   }
+    
+  // }
+  while (arr.length > 0) {
+    let min = Math.min(...arr)
+    let index = arr.indexOf(min)
+
+    sortedArray.push(min)
+    arr.splice(index,1)
+  }
+  return sortedArray
 }
 
 if (require.main === module) {

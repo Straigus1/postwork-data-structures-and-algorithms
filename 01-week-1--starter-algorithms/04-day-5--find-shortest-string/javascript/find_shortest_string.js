@@ -1,5 +1,14 @@
 function findShortestString(arr) {
   // type your code here
+  let shortLength = arr[0].length
+  let shortestString = arr[0]
+  for (let i=0; i < arr.length; i++) {
+    if (arr[i].length < shortLength) {
+      shortestString = arr[i]
+      shortLength = arr[i].length
+    }
+  }
+  return shortestString
 }
 
 if (require.main === module) {
@@ -22,5 +31,6 @@ if (require.main === module) {
 
 module.exports = findShortestString;
 
-// Please add your pseudocode to this file
-// And a written explanation of your solution
+// Loop through each string in the array. Assign a variable to equal the shortest string. Only allow the value to change if another string length is shorter
+// First we reference the length of the first string in the array. Then we iterate over each string and compared it to the next. The moment the strings length
+// is less than the lowest string, turn the variable to the new shortest length.

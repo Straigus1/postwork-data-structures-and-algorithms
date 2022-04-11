@@ -1,5 +1,15 @@
 function recursiveSearch(arr, target) {
   // type your code here
+  if (arr[0] === target) {
+    return true
+  } 
+
+  if (arr.length == 0) {
+    return false
+  }
+  
+  return recursiveSearch(arr.slice(1),target)
+
 }
 
 if (require.main === module) {
@@ -15,5 +25,5 @@ if (require.main === module) {
 
 module.exports = recursiveSearch;
 
-// Please add your pseudocode to this file
+// Each recursion needs to return a value, the moment one is true, return true, otherwise return false
 // And a written explanation of your solution

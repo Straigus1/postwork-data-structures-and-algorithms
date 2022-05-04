@@ -1,5 +1,21 @@
 function rotateArray(arr, k) {
-  // type your code here
+  // Shift all the values in an array k times
+  const rotated = []
+  let rotation = 0
+  let index = arr.length - k
+  // for (let i = arr.length; i > 0; i++) {
+  //   rotated.push(i-k)
+
+  // }
+  while (rotation < arr.length) {
+    rotated.push(arr[index])
+    index++
+    rotation++
+    if (index > arr.length - 1) {
+      index = 0
+    }
+  }
+  return rotated
 }
 
 if (require.main === module) {
